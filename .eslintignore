@@ -1,3 +1,4 @@
+src/router/*
 /build/
 /config/
 /dist/
