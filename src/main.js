@@ -8,6 +8,7 @@ import store from './vuex/store';
 
 import './vux-ui';
 import './assets/css/reset.css';
+import './fonts/iconfont.css'; //  图标字体
 import setWechatTitle from './utils/setWechatTitle';
 
 Vue.config.productionTip = false;
