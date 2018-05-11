@@ -48,5 +48,7 @@ module.exports = {
     'no-unused-vars': 0,
     'arrow-parens': ['error', 'always'],
     'no-mixed-operators': 'off',
+    'max-len':[1, 200],
+    'no-shadow': ["error", { "allow": ["state"] }],
   },
 }

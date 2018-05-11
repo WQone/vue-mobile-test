@@ -1,18 +1,9 @@
 <template>
   <div>
     <tabbar @on-index-change="wuqian">
-      <tabbar-item>
-        <i slot="icon" class="icon iconfont icon-shu"></i>
-        <span slot="label">Wechat</span>
-      </tabbar-item>
-      <tabbar-item selected>
-        <i slot="icon" class="icon iconfont icon-biao"></i>
-        <span slot="label">Message</span>
-      </tabbar-item>
-      <tabbar-item>
-        <!--<img slot="icon" src="../assets/img/user2.png">-->
-        <i slot="icon" class="icon iconfont icon-wo"></i>
-        <span slot="label">Explore</span>
+      <tabbar-item :link="item.path" v-for="(item, index) in tabbarArr" :key="index" :selected="$route.path === item.path">
+        <i slot="icon" class="icon iconfont" :class="item.icon"></i>
+        <span slot="label">{{item.name}}</span>
       </tabbar-item>
     </tabbar>
   </div>
@@ -22,11 +13,26 @@
 
 export default {
   mounted() {
-    console.log('userInfo');
   },
   data() {
     return {
-      msg: 'Welcome to Your Vue.js App',
+      tabbarArr: [{
+        name: '新闻',
+        icon: 'icon-shu',
+        path: '/News',
+      }, {
+        name: '应用',
+        icon: 'icon-biao',
+        path: '/Apply',
+      }, {
+        name: '消息',
+        icon: 'icon-xiaoxi',
+        path: '/Message',
+      }, {
+        name: '我的',
+        icon: 'icon-wo',
+        path: '/User',
+      }],
     };
   },
   methods: {

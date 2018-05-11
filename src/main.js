@@ -22,11 +22,10 @@ const goVue = () => {
   });
 
   new Vue({
-    el: '#app',
     router,
-    components: { App },
-    template: '<App/>',
-  });
+    store,
+    render: (h) => h(App),
+  }).$mount('#app');
 };
 
 goVue();

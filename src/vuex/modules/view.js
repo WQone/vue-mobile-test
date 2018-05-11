@@ -1,12 +1,20 @@
-const state = {};
+const state = {
+  isRight: false,
+};
 
 // getters
-const getters = {};
+const getters = {
+  getIsRight: (state) => state.isRight,
+};
 
 const actions = {};
 
 // mutations
-const mutations = {};
+const mutations = {
+  isRight(res, data) {
+    res.isRight = data;
+  },
+};
 
 export default {
   state,

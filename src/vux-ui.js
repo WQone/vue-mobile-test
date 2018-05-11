@@ -2,7 +2,7 @@ import Vue from 'vue';
 
 import {
   // Icon,
-  // XButton,
+  XButton,
   // Divider,
   // Flexbox,
   // FlexboxItem,
@@ -13,7 +13,7 @@ import {
   // Calendar,
   // CellBox,
   // CellFormPreview,
-  // Cell,
+  Cell,
   // CheckIcon,
   // Checker,
   // CheckerItem,
@@ -22,7 +22,7 @@ import {
   // DatetimeRange,
   // Datetime,
   // FormPreview,
-  // Group,
+  Group,
   // InlineXSwitch,
   // InlineXNumber,
   // InlineCalendar,
@@ -39,8 +39,8 @@ import {
   // Search,
   // XInput,
   // XAddress,
-  // Marquee,
-  // MarqueeItem,
+  Marquee,
+  MarqueeItem,
   // Panel,
   // Qrcode,
   // Swiper,
@@ -75,11 +75,15 @@ import {
   // Scroller,
 } from 'vux';
 
-Vue.component('Tabbar', Tabbar);
+Vue.component('Tabbar', Tabbar); // 底部导航
 Vue.component('TabbarItem', TabbarItem);
+Vue.component('Marquee', Marquee); // 公告
+Vue.component('MarqueeItem', MarqueeItem);
+Vue.component('Cell', Cell);
+Vue.component('Group', Group);
+Vue.component('XButton', XButton);
 
 // Vue.component('Icon', Icon);
-// Vue.component('XButton', XButton);
 // Vue.component('Divider', Divider);
 // Vue.component('Flexbox', Flexbox);
 // Vue.component('FlexboxItem', FlexboxItem);

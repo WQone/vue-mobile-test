@@ -1,7 +1,6 @@
 <template>
-  <div class="hello">
+  <div>
     <p>{{msg}}</p>
-     <x-button @click.native="outLogin">退出</x-button>
   </div>
 </template>
 
@@ -10,18 +9,15 @@
 
 export default {
   mounted() {
-    console.log('我的信息');
+    console.log('我的消息');
   },
   data() {
     return {
-      msg: '我的信息',
+      msg: '我的消息',
     };
   },
   methods: {
-    outLogin() {
-      sessionStorage.removeItem('wuqian');
-      this.$router.push({ path: '/Login' });
-    },
+
   },
 };
 </script>
