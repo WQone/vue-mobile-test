@@ -5,9 +5,10 @@
  */
 
 import axios from 'axios';
+import config from '../config';
 
 const instance = axios.create({
-  baseURL: 'www.baidu.com',
+  baseURL: config.apiHost,
   withCredentials: true,
   params: {
     access_token: 'abcdefg',

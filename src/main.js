@@ -5,6 +5,7 @@ import Vue from 'vue';
 import App from './App';
 import router from './router';
 import store from './vuex/store';
+import config from './config';
 
 import './vux-ui';
 import './assets/css/reset.css';

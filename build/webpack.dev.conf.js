@@ -39,7 +39,9 @@ const devWebpackConfig = merge(baseWebpackConfig, {
       : false,
     publicPath: config.dev.assetsPublicPath,
     proxy: config.dev.proxyTable,
-    quiet: true, // necessary for FriendlyErrorsPlugin
+    inline: true, // 开启页面自动刷新
+    quiet: true, // 控制台中不输出打包的信息
+    progress: false, // 显示打包的进度
     watchOptions: {
       poll: config.dev.poll,
     }
