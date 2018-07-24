@@ -1,23 +1,31 @@
 <template>
   <div>
-    <p>{{msg}}</p>
+    <panel header="我的新闻" :list="list" type="5"></panel>
   </div>
 </template>
 
 <script>
-
+import moblie from '../../api/mobile';
 
 export default {
   mounted() {
     console.log('我的新闻');
+    this.dataList();
   },
   data() {
     return {
-      msg: '我的新闻',
+      list: [],
     };
   },
   methods: {
-
+    dataList() {
+      moblie.getData().then((res) => {
+        if (res.data.code === 0) {
+          this.list = res.data.result.NewsList;
+          console.log(999, this.list);
+        }
+      });
+    },
   },
 };
 </script>

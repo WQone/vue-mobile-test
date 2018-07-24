@@ -9,7 +9,7 @@ import {
   // Grid,
   // GridItem,
   // Sticky,
-  // ViewBox,
+  ViewBox,
   // Calendar,
   // CellBox,
   // CellFormPreview,
@@ -41,7 +41,7 @@ import {
   // XAddress,
   Marquee,
   MarqueeItem,
-  // Panel,
+  Panel,
   // Qrcode,
   // Swiper,
   // XProgress,
@@ -82,6 +82,8 @@ Vue.component('MarqueeItem', MarqueeItem);
 Vue.component('Cell', Cell);
 Vue.component('Group', Group);
 Vue.component('XButton', XButton);
+Vue.component('Panel', Panel);
+Vue.component('ViewBox', ViewBox);
 
 // Vue.component('Icon', Icon);
 // Vue.component('Divider', Divider);

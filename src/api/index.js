@@ -24,26 +24,20 @@ instance.interceptors.request.use((request) => {
     },
   };
   return axiosRequest;
-}); 
+});
 
 instance.interceptors.response.use(
   (response) => {
-    if (response.data.code !== 0 && response.data.code !== 20000 && response.data.code !== 401) {
-      alert(response.data.message);
-    }
-    if (response.data.code === 401) {
-    	alert('登录信息已失效，请重新登录');
+    if (response.data.code !== 0) {
+      console.log(response.data.message);
     }
     if (response.data.code === 403) {
       window.location.hash = '#/403';
     }
-    if (response.data.code === 20000) {
-      alert('错误');
-    }
     return response;
   },
   (error) => {
-  	alert(error.message);
+    console.log(error.message);
     return Promise.reject(error);
   },
 );

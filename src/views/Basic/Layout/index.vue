@@ -1,8 +1,10 @@
 <template>
-  <div>
-    <div v-if="isShow">
-      <router-view></router-view>
-      <tabNav v-if="isShowNav"></tabNav>
+  <div style="height:100%;">
+    <div v-if="isShow" style="height:100%;">
+      <view-box ref="viewBox">
+        <router-view></router-view>
+        <tabNav v-if="isShowNav" slot="bottom"></tabNav>
+      </view-box>
     </div>
     <div v-else>
       死去登录
@@ -42,5 +44,4 @@ export default {
 </script>
 
 <style scoped>
-
 </style>

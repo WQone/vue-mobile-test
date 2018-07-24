@@ -3,7 +3,7 @@
 module.exports = {
   root: true,
   parserOptions: {
-    parser: 'babel-eslint'
+    parser: 'babel-eslint',
   },
   env: {
     browser: true,
@@ -12,19 +12,18 @@ module.exports = {
   // consider switching to `plugin:vue/strongly-recommended` or `plugin:vue/recommended` for stricter rules.
   extends: ['plugin:vue/essential', 'airbnb-base'],
   // required to lint *.vue files
-  plugins: [
-    'vue'
-  ],
+  plugins: ['vue'],
   // check if imports actually resolve
   settings: {
     'import/resolver': {
       webpack: {
-        config: 'build/webpack.base.conf.js'
-      }
-    }
+        config: 'build/webpack.base.conf.js',
+      },
+    },
   },
   // add your custom rules here
   rules: {
+    'prefer-template': 'off',
     // don't require .vue extension when importing
     'import/extensions': [
       'error',
@@ -48,7 +47,19 @@ module.exports = {
     'no-unused-vars': 0,
     'arrow-parens': ['error', 'always'],
     'no-mixed-operators': 'off',
-    'max-len':[1, 200],
     'no-shadow': ["error", { "allow": ["state"] }],
+    'max-len': [
+      'error',
+      {
+        code: 100,
+        ignorePattern: '<.*>$',
+        ignoreComments: true,
+        ignoreTrailingComments: true,
+        ignoreUrls: true,
+        ignoreStrings: true,
+        ignoreTemplateLiterals: true,
+        ignoreRegExpLiterals: true,
+      },
+    ],
   },
-}
+};

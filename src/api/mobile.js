@@ -5,12 +5,13 @@
 import api from 'axios';
 
 const path = {
-  mobile: 'www.baidu.com',
+  getData: '/news/list', // 获取数据
 };
 
 // 获取所有的接口地址
-const mobile = () => api.get(path.mobile);
+const getData = () => api.post(path.getData);
 
 export default {
-  mobile,
+  path,
+  getData,
 };
