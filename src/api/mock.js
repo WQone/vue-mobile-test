@@ -25,5 +25,6 @@ Mock.mock(mobile.path.getData, 'post', {
   status: 200,
   code: 0,
   message: null,
+  first: '@FIRST',
   result: { NewsList },
 });

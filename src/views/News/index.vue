@@ -22,7 +22,7 @@ export default {
       moblie.getData().then((res) => {
         if (res.data.code === 0) {
           this.list = res.data.result.NewsList;
-          console.log(999, this.list);
+          console.log('res.data', res.data);
         }
       });
     },
@@ -34,5 +34,14 @@ export default {
 <style scoped>
 p {
   width: 100px;
+}
+</style>
+<style>
+.weui-media-box:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 3px 9px 0 rgba(0, 0, 0, 0.15);
+}
+.weui-media-box {
+  transition: 0.3s;
 }
 </style>
