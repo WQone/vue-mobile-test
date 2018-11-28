@@ -6,6 +6,7 @@
   "private": true,
   "scripts": {
     "dev": "webpack-dev-server --config build/webpack.dev.conf.js",
+    "build": "cross-env NODE_ENV=production node build/build.js",
     "master": "cross-env NODE_ENV=master node build/build.js",
     "preview": "cross-env NODE_ENV=preview node build/build.js",
     "develop": "cross-env NODE_ENV=develop node build/build.js"
@@ -34,6 +35,7 @@
     "babel-preset-stage-2": "^6.22.0",
     "chalk": "^2.0.1",
     "copy-webpack-plugin": "^4.0.1",
+    "compression-webpack-plugin": "^1.0.0",
     "cross-env": "^5.1.5",
     "css-loader": "^0.28.0",
     "eslint": "^4.15.0",
